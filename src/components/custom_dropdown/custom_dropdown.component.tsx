@@ -26,7 +26,7 @@ const CustomDropdown = ({children, item, index}: DropdownProps) => {
                     <Action>
                         <CustomToggle/>
                         <Caret onClick={() => togglePane(index)}>
-                            <Drop src={Icons.CaretDown} />
+                            <Drop src={(selected !== null) ? Icons.CaretUp : Icons.CaretDown} />
                         </Caret>
                     </Action>
                 </ItemContent>
@@ -188,7 +188,7 @@ const Child = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #24262c;
+  //background-color: #24262c;
   border-radius: 8px;
   margin-bottom: 5px;
   padding: 0;
