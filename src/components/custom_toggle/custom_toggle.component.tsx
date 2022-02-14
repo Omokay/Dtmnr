@@ -51,7 +51,7 @@ const Input = styled.input`
 const Slider = styled.span`
   display: flex;
   cursor: pointer;
-  width: 60px;
+  width: 48px;
   height: 19px;
   border-radius: 100px;
   background-color: #797878;
