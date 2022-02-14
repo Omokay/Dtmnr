@@ -32,7 +32,7 @@ const Settings = () => {
                             } else {
                                 return (
                                     // <GroupToggler key={setting1.id} isCollapsed={false} setValue={setCollapsed}/>
-                                    <CustomDropdown key={index} index={index} item={setting1.item} children={setting1.children}/>
+                                    <CustomDropdown key={index} item={setting1.item} children={setting1.children}/>
                                 )
                             }
                        }
@@ -60,7 +60,7 @@ const Settings = () => {
                                        )
                                    } else {
                                        return (
-                                          <CustomDropdown key={index} index={index} item={setting2.item} children={setting2.children} />
+                                          <CustomDropdown key={index} item={setting2.item} children={setting2.children} />
                                        )
                                    }
                                }

@@ -6,27 +6,29 @@ import CustomSelect from "../react_select/react_select.component";
 
 interface DropdownProps {
     children: any,
-    item: string,
-    index: number,
+    item: string
 }
 
-const CustomDropdown = ({children, item, index}: DropdownProps) => {
-    const [selected, setSelected] = useState(null);
+const CustomDropdown = ({children, item}: DropdownProps) => {
+    const [selected, setSelected] = useState(false);
 
-    const togglePane = (index) => {
-        if (selected === index) {
-            return setSelected(null);
+    const togglePane = () => {
+        if(!selected){
+            children.forEach(x=>{
+                x.isChecked = false;
+            })
         }
-        setSelected(index);
+        setSelected(!selected);
+
     }
     return (
             <Item >
                 <ItemContent>
                     <Title>{item}</Title>
                     <Action>
-                        <CustomToggle/>
-                        <Caret onClick={() => togglePane(index)}>
-                            <Drop src={(selected !== null) ? Icons.CaretUp : Icons.CaretDown} />
+                        <CustomToggle bubble={togglePane}/>
+                        <Caret>
+                            <Drop src={selected ? Icons.CaretUp : Icons.CaretDown} />
                         </Caret>
                     </Action>
                 </ItemContent>

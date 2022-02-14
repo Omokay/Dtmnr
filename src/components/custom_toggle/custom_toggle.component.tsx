@@ -1,13 +1,17 @@
 import {useState} from 'react';
 import styled from 'styled-components';
 
+interface CustomProps {
+    bubble?:any;
+}
 
-const CustomToggle = () => {
+const CustomToggle = ({bubble}: CustomProps) => {
 
-    const [checked, setChecked] = useState(true);
+    const [checked, setChecked] = useState(false);
 
     const togglerHandler = () => {
         setChecked(!checked);
+        bubble && bubble();
     }
 
     return (
