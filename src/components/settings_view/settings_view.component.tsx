@@ -12,7 +12,7 @@ const Settings = () => {
         <Container>
            {/* Row with Settings and Alert Cards*/}
            <CardRow>
-               {/*Settings First Column*/}zx
+               {/*Settings First Column*/}
                <Column>
                    <Header>
                        Settings
