@@ -139,7 +139,7 @@ const Action = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center; 
-  width: 100px;
+  width: 80px;
 `;
 
 // const TestContent = styled.div`
